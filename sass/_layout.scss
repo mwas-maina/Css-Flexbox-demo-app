@@ -1,28 +1,109 @@
 .container{
-    background-color: var(--color-gray-light-4);
-    min-height: 50rem;
-    margin: 8rem auto;
-    width: 80%;
+    background-color: var(--color-gray-light-2);
+    //margin: 8rem auto;
+    //max-width: 120rem;
+   
+    @media only screen and(max-width:$bp-largest){
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+       
+    }
+
 
 }
 .header{
-   background-color: var(--color-white);
-    height: 7rem;
+    background-color: var(--color-white);;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    border-bottom: var(--line);
+    @media only screen and (max-width: $bp-small) {
+    flex-wrap: wrap;
+    height: 10rem;
+    align-content: space-around;
+    }
+
    
     
     
 }
 .content{
     display: flex;
+    @media only screen and (max-width:$bp-medium){
+       flex-direction: column;
+
+    }
+
+  
+  
  
 
 }
 .sidebar{
-    background-color:var(--color-primary-dark);
+    background-color:var(--color-gray-dark-1);
     flex: 0 0 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media only screen and (max-width: $bp-smallest) {
+       background-color: #fff;
+       color:var(--color-gray-dark-1);
+       }
+
 
 }
 .hotel-content{
-    background-color:var(--color-gray-dark-1);
+    background-color:var(--color-gray-light-1);
     flex: 1;
+  
+}
+.detail{
+display: flex;
+padding: 3rem;
+background-color: var(--color-gray-light-3);
+border-bottom: var(--line);
+font-size: 1.4rem;
+color: var(--color-gray-dark-1);
+@media only screen and (max-width: $bp-medium) {
+    padding: 2.6rem;
+   }
+   @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+   }  
+   @media only screen and (max-width: $bp-smallest) {
+    padding: 1rem;
+   } 
+  
+
+
+
+}
+.description{
+    background-color: #fff;
+    padding: 3rem;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+    box-shadow:var(--shadow-light);
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+       }
+       @media only screen and (max-width: $bp-small) {
+        padding: 1.7rem;
+        margin: 0;
+        margin-bottom: 3rem;
+       }   
+
+}
+.user-reviews{
+ 
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    
+
 }

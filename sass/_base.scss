@@ -15,8 +15,18 @@
 --color-gray-dark-3:#999;
 
 --color-white:#fff;
+--line:1px solid var(--color-gray-light-3);
+--shadow-dark:0 2rem 4rem rgba(0,0,0.5);
+--shadow-light:0 1.6rem 4rem rgba(0,0,0,.2);
 
 }
+$bp-extra:75.1em;   //1200px
+$bp-largest:75em;   //1200px
+$bp-large:68.75em;   //1100px
+$bp-medium:56.25em;    //900px
+$bp-small:37.5em;    //600px
+$bp-smallest:32.5em;    //500px  520
+
 
 *,
 *::after,
@@ -28,6 +38,10 @@
 html{
     font-size: 62.5%;
     box-sizing: border-box;
+    @media only screen and(max-width:$bp-large){
+        font-size: 50%;
+
+    }
 }
 body{
     background-image: linear-gradient(to right bottom, var(--color-primary),var(--color-primary-dark));
@@ -35,6 +49,8 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     min-height:100vh;
+    font-family: sans-serif;
+
    
 
 }
